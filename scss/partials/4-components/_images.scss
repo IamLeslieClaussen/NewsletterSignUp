@@ -1,0 +1,11 @@
+.container__right-img {
+  background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+  width: 375px;
+  height: 284px;
+
+  @include large {
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+    width: 400px;
+    height: 593px;
+  }
+}

@@ -1,0 +1,12 @@
+form.error {
+  .error-message {
+    display: block;
+  }
+}
+
+form.error {
+  input {
+    border: 1px solid red;
+    display: block;
+  }
+}

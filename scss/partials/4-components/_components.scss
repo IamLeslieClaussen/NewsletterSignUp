@@ -1,0 +1,157 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+
+  @include large {
+    flex-direction: row-reverse;
+    padding: 24px;
+    border-radius: 36px;
+  }
+}
+
+.container__left {
+  padding: 40px 24px;
+  background-color: white;
+}
+
+.container__left__text {
+  @include large {
+    width: 376px;
+  }
+
+  &-header {
+    font-size: 40px;
+    font-weight: $fw-heavy;
+    margin-bottom: 24px;
+
+    @include large {
+      font-size: 55px;
+    }
+  }
+
+  &-paragraph {
+    margin-bottom: 24px;
+  }
+}
+
+.checkmark-list {
+  padding: 10px;
+  line-height: 20px;
+  margin-left: -5px;
+  list-style: none;
+  margin-bottom: 20px;
+
+  li {
+    padding-bottom: 10px;
+    display: flex;
+  }
+
+  li::before {
+    content: url(/assets/images/icon-list.svg);
+    margin-right: 10px;
+  }
+}
+
+form {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  input {
+    @include box(327px, 56px);
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid light-g;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  .error-message {
+    position: absolute;
+    color: red;
+    right: 0;
+    display: none;
+  }
+
+  button {
+    @include box(100%, 56px);
+    cursor: pointer;
+    margin-top: 24px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: $neutral-dark-dark-slate-grey;
+
+    &:hover {
+      background-color: hsl(4, 100%, 67%);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.success__container {
+  width: 375px;
+  height: 800px;
+  background-color: white;
+  padding: 149px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include large {
+    width: 504px;
+    height: 520px;
+
+    border-radius: 36px;
+  }
+
+  &__box {
+    img {
+      margin-bottom: 20px;
+
+      @include large {
+        margin-top: -30px;
+      }
+    }
+
+    &-header {
+      margin-bottom: 20px;
+      @include large {
+        font-size: 40px;
+      }
+    }
+
+    &-paragraph {
+      line-height: 20px;
+    }
+  }
+
+  &-button {
+    margin-bottom: 60px;
+    @include box(100%, 56px);
+    border: none;
+    border-radius: 8px;
+    background-color: $neutral-dark-dark-slate-grey;
+    color: white;
+
+    &:hover {
+      background-color: $primary-tomato;
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}

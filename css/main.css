@@ -1,0 +1,241 @@
+/*******COLORS********/
+/**primary**/
+/**Neutral**/
+/*font-size*/
+/*font-weight*/
+/*Media queries*/
+body {
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto";
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+/******Media Queries********/
+.container__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row-reverse;
+    padding: 24px;
+    border-radius: 36px;
+  }
+}
+
+.container__left {
+  padding: 40px 24px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container__left__text {
+    width: 376px;
+  }
+}
+.container__left__text-header {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1024px) {
+  .container__left__text-header {
+    font-size: 55px;
+  }
+}
+.container__left__text-paragraph {
+  margin-bottom: 24px;
+}
+
+.checkmark-list {
+  padding: 10px;
+  line-height: 20px;
+  margin-left: -5px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.checkmark-list li {
+  padding-bottom: 10px;
+  display: flex;
+}
+.checkmark-list li::before {
+  content: url(/assets/images/icon-list.svg);
+  margin-right: 10px;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+}
+form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+form input {
+  width: 327px;
+  height: 56px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid light-g;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+form .error-message {
+  position: absolute;
+  color: red;
+  right: 0;
+  display: none;
+}
+form button {
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+}
+form button:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.success__container {
+  width: 375px;
+  height: 800px;
+  background-color: white;
+  padding: 149px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  .success__container {
+    width: 504px;
+    height: 520px;
+    border-radius: 36px;
+  }
+}
+.success__container__box img {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .success__container__box img {
+    margin-top: -30px;
+  }
+}
+.success__container__box-header {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .success__container__box-header {
+    font-size: 40px;
+  }
+}
+.success__container__box-paragraph {
+  line-height: 20px;
+}
+.success__container-button {
+  margin-bottom: 60px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+}
+.success__container-button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
+.hide {
+  display: none !important;
+}
+
+form.error .error-message {
+  display: block;
+}
+
+form.error input {
+  border: 1px solid red;
+  display: block;
+}
+
+.container__right-img {
+  background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+  width: 375px;
+  height: 284px;
+}
+@media only screen and (min-width: 1024px) {
+  .container__right-img {
+    background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+    width: 400px;
+    height: 593px;
+  }
+}
